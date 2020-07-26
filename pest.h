@@ -1,5 +1,5 @@
-#ifndef TEST_H
-#define TEST_H
+#ifndef PEST_H
+#define PEST_H
 
 #include <stdbool.h>
 #include <stdint.h>
@@ -85,5 +85,5 @@ bool _ts_AssertNotEqualMemory(void *, void *, size_t, const char *, const char *
 
 #define TEST_STATUS() _ts_GetStatusCode()
 
-#endif /* TEST_H */
+#endif /* PEST_H */
 
