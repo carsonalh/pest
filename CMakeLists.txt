@@ -13,11 +13,7 @@ add_library (${PROJECT_NAME} STATIC ${${PROJECT_NAME}_sources})
 target_include_directories (${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_compile_options (${PROJECT_NAME}
         PRIVATE
-            $<$<OR:
-                $<C_COMPILER_ID:GNU>,
-                $<C_COMPILER_ID:Clang>,
-                $<C_COMPILER_ID:MinGW>
-                    >: -Wall -Werror>
+            $<$<OR:$<C_COMPILER_ID:GNU>,$<C_COMPILER_ID:Clang>,$<C_COMPILER_ID:MinGW>>:-Wall -Werror>
             $<$<C_COMPILER_ID:MSVC>: /Wall>
 )
 
